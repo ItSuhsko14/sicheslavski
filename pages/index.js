@@ -7,7 +7,6 @@ import TitlePhoto from '../public/titlephoto.png'
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import PhotoGallery from '../components/photogallery/photogallery';
-import {photoblok1, photoblok2, photoblok3} from './images'
 
 export default function Home() {
 
