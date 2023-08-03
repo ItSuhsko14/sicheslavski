@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  padding: 0 0.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,13 +20,10 @@
 
 .title {
   margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
+  width: 80%;
+  max-width: 800px;
 }
 
-.title {
-  text-align: center;
-}
 
 .title,
 .description {
@@ -35,8 +32,12 @@
 
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 200px;
+  font-size: 5vh;
+  margin: 1vh;
 }
 
 .grid {
@@ -80,7 +81,8 @@
 }
 
 .logo {
-  height: 1em;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 600px) {
@@ -88,4 +90,31 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.sociallink {
+  color: #4a4a4a; /* Темний сірий колір */
+  text-decoration: none; /* Вимкнути підкреслення */
+  transition: color 0.2s ease; /* Плавна анімація зміни кольору */
+}
+
+/* Посилання при наведенні курсора */
+.sociallink:hover {
+  color: #007bff; /* Синій колір */
+  text-decoration: underline; /* Підкреслити посилання при наведенні */
+}
+
+/* Відвідані посилання */
+.sociallink:visited {
+  color: #4a4a4a; /* Темний сірий колір */
+}
+
+/* Натиснуті посилання */
+.sociallink:active {
+  color: #007bff; /* Синій колір */
+}
+
+/* Активні посилання (колір при виборі клавішами) */
+.sociallink:focus {
+  color: #007bff; /* Синій колір */
 }

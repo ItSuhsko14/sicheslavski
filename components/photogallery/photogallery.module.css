@@ -1,0 +1,16 @@
+
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Автоматично масштабувати колонки від 250px до 1fr */
+    gap: 20px; /* Відступи між елементами */
+    padding-bottom: 1rem;
+}
+    
+
+
+.image {
+    width: 100%; /* Зображення займатиме 100% ширини колонки */
+    height: auto; /* Зберігаємо пропорції зображення */
+    border-radius: 2px; /* Додаємо закруглені кути для кращого вигляду */
+  }

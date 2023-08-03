@@ -1,51 +1,61 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import Logo from '../public/logo.png'
+import TitlePhoto from '../public/titlephoto.png'
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import PhotoGallery from '../components/photogallery/photogallery';
+import {photoblok1, photoblok2, photoblok3} from './images'
 
 export default function Home() {
+    
+  console.log(photoblok1);
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Січеславці</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className={styles.title}>
+            <Image 
+              src={TitlePhoto} 
+              alt='групове фото козаків Січеславців'
+              className={styles.logo}  
+            />
+          </div>
+          <div className={styles.title}>
+              <Image 
+                src={Logo} 
+                alt='клуб козацького бою Січеславці'
+                className={styles.logo}  
+              />
+          </div>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          <Link 
+            href="http://facebook.com/sicheslavci" 
+            target="_blank"
+            className={styles.sociallink}
+            >
+                <FaFacebook/>
+          </Link>
+          <Link 
+            href="http://instagram.com/sicheslavci"
+            target="_blank"
+          >
+              <FaInstagram/>
+          </Link>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          
+          <PhotoGallery images={photoblok1} />
+          <PhotoGallery images={photoblok2} />
+          <PhotoGallery images={photoblok3} />
         </div>
       </main>
 
@@ -55,18 +65,16 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          Powered by{' '} Mustache development
         </a>
       </footer>
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
-          flex: 1;
+          padding: 2rem 0;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
         }
         footer {
