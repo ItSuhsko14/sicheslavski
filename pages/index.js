@@ -7,27 +7,27 @@ import TitlePhoto from '../public/titlephoto.png'
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import PhotoGallery from '../components/photogallery/photogallery';
-
+import { photoblok1, photoblok2, photoblok3 } from './images';
 export default function Home() {
 
   
- const photoblok1 = [
-    { src: "/img/img1.jpg", ratio: 3/2},
-    { src: "/img/img2.jpg", ratio: 3/2},
-    { src: "/img/img4.jpg", ratio: 3/2},   
-]
+//  const photoblok1 = [
+//     { src: "/img/img1.jpg", ratio: 3/2},
+//     { src: "/img/img2.jpg", ratio: 3/2},
+//     { src: "/img/img4.jpg", ratio: 3/2},   
+// ]
 
- const photoblok2 = [
-    { src: "/img/img3.jpg", ratio: 1/1},
-    { src: "/img/img7.jpg", ratio: 1/1},
-    { src: "/img/img9.jpg", ratio: 1/1},   
-]
+//  const photoblok2 = [
+//     { src: "/img/img3.jpg", ratio: 1/1},
+//     { src: "/img/img7.jpg", ratio: 1/1},
+//     { src: "/img/img9.jpg", ratio: 1/1},   
+// ]
 
- const photoblok3 = [
-    { src: "/img/img5.jpg", ratio: 3/2},
-    { src: "/img/img6.jpg", ratio: 3/2},
-    { src: "/img/img8.jpg", ratio: 3/2},   
-]
+//  const photoblok3 = [
+//     { src: "/img/img5.jpg", ratio: 3/2},
+//     { src: "/img/img6.jpg", ratio: 3/2},
+//     { src: "/img/img8.jpg", ratio: 3/2},   
+// ]
 
 
   console.log(photoblok1);
@@ -45,7 +45,7 @@ export default function Home() {
               alt='групове фото козаків Січеславців'
               className={styles.logo}  
             />
-          </div>
+        </div>
           <div className={styles.title}>
               <Image 
                 src={Logo} 
@@ -70,8 +70,31 @@ export default function Home() {
           </Link>
         </p>
 
+        <div>
+          <h2>Про нас.</h2>
+          <p>
+            Клуб козацького бою Січеславці займаються розвитком козацької традиції у Дніпрі та по всій Україні.
+          </p>
+          <p>
+            Основні напрямки нашої діяльності: козацкий стан, Січеславські джури, туристичний маршрут, мистецтво, фестивалі.
+          </p>
+        </div>
         <div className={styles.grid}>
-          
+          <PhotoGallery images={photoblok1} />
+          <PhotoGallery images={photoblok2} />
+          <PhotoGallery images={photoblok3} />
+        </div>
+        
+        <div>
+          <h2>Козацьки стан.</h2>
+          <p>
+            Січеславці запрошують гостей Дніпра до козацького стану - локації, яка знаходиться у яхт-клубі "Січ" і презентує козацьку культуру Січеслава
+          </p>
+          <p>
+            В нашому козацькому стані Ви зможете зануритись до козацької культури, спробувати свої сили у володінні зброєю, стрільбі з лука, ковальській майстерності, їзді верхи, та козацькому водному маршруті.
+          </p>
+        </div>
+        <div className={styles.grid}>
           <PhotoGallery images={photoblok1} />
           <PhotoGallery images={photoblok2} />
           <PhotoGallery images={photoblok3} />
